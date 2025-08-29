@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IT Kids: Professional coding school for kids aged 11-15. Learn HTML, CSS, JavaScript, and AI through fun projects. Enroll today!">
+  <meta name="keywords" content="coding school, IT academy, kids programming, web development for children, HTML CSS JavaScript courses, AI for kids">
+  <meta name="author" content="IT Kids">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marsitacademy.com">
+  <meta property="og:title" content="IT Kids - Coding School for Kids">
+  <meta property="og:description" content="Professional coding education for children aged 11-15. Project-based learning with expert instructors.">
+  <meta property="og:image" content="https://marsitacademy.com/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://marsitacademy.com">
+  <meta property="twitter:title" content="IT Kids - Coding School for Kids">
+  <meta property="twitter:description" content="Professional coding education for children aged 11-15. Project-based learning with expert instructors.">
+  <meta property="twitter:image" content="https://marsitacademy.com/og-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://marsitacademy.com/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://marsitacademy.com/apple-touch-icon.png">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "IT Kids",
+    "url": "https://marsitacademy.com",
+    "logo": "https://marsitacademy.com/logo.png",
+    "description": "Professional coding school for children aged 11-15",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Education Street",
+      "addressLocality": "Tashkent",
+      "addressRegion": "Chilonzor",
+      "postalCode": "100000",
+      "addressCountry": "UZ"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+998901234567",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://facebook.com/marsitacademy",
+      "https://instagram.com/marsitacademy",
+      "https://t.me/marsitacademy"
+    ]
+  }
+  </script>
+
+  <title>IT Kids | Professional Coding School for Kids (11-15 years)</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #a8aaff;
+      --primary-dark: #3fd8e6;
+      --secondary: #8b5cf6;
+      --accent: #ec4899;
+      --success: #10b981;
+      --light: #f9fafb;
+      --dark: #1e293b;
+      --gray: #64748b;
+      --light-gray: #e2e8f0;
+      --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --transition: all 0.3s ease;
+      --radius: 16px;
+      --header-height: 80px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background-color: #f8fafc;
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    /* Background animation */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    
+    .bg-animation div {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    
+    .bg-1 {
+      width: 500px;
+      height: 500px;
+      background: var(--primary);
+      top: -200px;
+      right: -200px;
+      animation: float 25s infinite ease-in-out;
+    }
+    
+    .bg-2 {
+      width: 400px;
+      height: 400px;
+      background: var(--secondary);
+      bottom: -150px;
+      left: -150px;
+      animation: float 30s infinite ease-in-out reverse;
+    }
+    
+    .bg-3 {
+      width: 300px;
+      height: 300px;
+      background: var(--accent);
+      top: 50%;
+      right: 10%;
+      animation: float 20s infinite ease-in-out;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      25% { transform: translate(100px, 50px); }
+      50% { transform: translate(50px, 100px); }
+      75% { transform: translate(-50px, 50px); }
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: white;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      height: var(--header-height);
+      transition: var(--transition);
+    }
+    
+    .header-container {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--dark);
+      transition: var(--transition);
+    }
+    
+    .logo i {
+      color: var(--primary);
+      font-size: 1.8rem;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 32px;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      position: relative;
+      padding: 8px 0;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+    
+    nav a:hover {
+      color: var(--primary);
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+    
+    nav a:hover::after {
+      width: 100%;
+    }
+    
+    .auth-buttons {
+      display: flex;
+      gap: 16px;
+    }
+    
+    .btn {
+      padding: 10px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.3);
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+    
+    .btn-outline:hover {
+      background-color: rgba(99, 102, 241, 0.1);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--dark);
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: calc(var(--header-height) + 100px) 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+    }
+    
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 4.5rem;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--dark);
+    }
+    
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+    }
+    
+    .hero h1 span::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+      z-index: -1;
+      border-radius: 4px;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+      color: var(--gray);
+      max-width: 600px;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    
+    .hero-image {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%;
+      max-width: 600px;
+      z-index: 1;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Registration Form */
+    .registration {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #f0f4ff 0%, #f9f5ff 100%);
+    }
+    
+    .registration-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+    }
+    
+    .registration-header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .registration-header h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .registration-header p {
+      opacity: 0.9;
+    }
+    
+    .registration-form {
+      padding: 40px;
+    }
+    
+    /* Post-Registration Section */
+    .post-registration {
+      padding: 100px 0;
+      background-color: white;
+      display: none;
+    }
+    
+    .post-registration.active {
+      display: block;
+    }
+    
+    .post-registration-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .post-registration h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    
+    .post-registration p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      color: var(--gray);
+    }
+    
+    .survey-form {
+      background: #f8fafc;
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--card-shadow);
+      margin-top: 40px;
+    }
+    
+    .form-group {
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 14px 20px;
+      border: 2px solid var(--light-gray);
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .success-message {
+      display: none;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid #10b981;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      color: #065f46;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #f0f4ff 0%, #f9f5ff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonials-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .testimonial-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      margin-bottom: 40px;
+    }
+    
+    .testimonial-card::before {
+      content: '\201C';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 5rem;
+      color: rgba(99, 102, 241, 0.1);
+      font-family: serif;
+      line-height: 1;
+    }
+    
+    .testimonial-content {
+      font-style: italic;
+      color: var(--dark);
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    
+    .author-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+    
+    .author-info p {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+    
+    /* CTA Section */
+    .cta {
+      padding: 100px 0;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 24px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-light {
+      background-color: white;
+      color: var(--primary);
+    }
+    
+    .btn-light:hover {
+      background-color: #f3f4f6;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn-outline-light {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    
+    .btn-outline-light:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding-top: 80px;
+      position: relative;
+    }
+    
+    .footer-top {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 24px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: var(--primary);
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column ul li {
+      margin-bottom: 14px;
+    }
+    
+    .footer-column ul li a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .footer-column ul li a:hover {
+      color: white;
+      padding-left: 4px;
+    }
+    
+    .footer-column p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      background-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .footer-bottom {
+      padding: 30px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+    
+    .footer-bottom a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+      display: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      .hero-image {
+        width: 50%;
+      }
+    }
+    
+    @media (max-width: 900px) {
+      :root {
+        --header-height: 70px;
+      }
+      
+      .hero {
+        padding: calc(var(--header-height) + 60px) 0 60px;
+      }
+      
+      .hero-content {
+        max-width: 100%;
+        text-align: center;
+      }
+      
+      .hero-buttons {
+        justify-content: center;
+      }
+      
+      .hero-image {
+        position: relative;
+        width: 90%;
+        max-width: 500px;
+        margin: 40px auto 0;
+        transform: none;
+      }
+      
+      nav ul {
+        gap: 20px;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      nav {
+        display: none;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        padding: 20px 0;
+      }
+      
+      nav.active {
+        display: block;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      
+      .hero p {
+        font-size: 1.1rem;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+      
+      .registration-form {
+        padding: 20px;
+      }
+      
+      .survey-form {
+        padding: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      :root {
+        --header-height: 60px;
+      }
+      
+      .hero {
+        padding: calc(var(--header-height) + 40px) 0 40px;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .cta h2 {
+        font-size: 2.2rem;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+    }
+    
+    /* Animation classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <div class="bg-1"></div>
+    <div class="bg-2"></div>
+    <div class="bg-3"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <i class="fas fa-rocket"></i>
+        IT Kids
+      </a>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#registration">Register</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="#registration" class="btn btn-outline">Free Trial</a>
+        <a href="#registration" class="btn btn-primary">Get Started</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1>Code Your <span>Future</span> Today</h1>
+        <p>Professional coding education for kids aged 11-15. Learn HTML, CSS, JavaScript, and AI through fun, project-based learning with expert instructors.</p>
+        <div class="hero-buttons">
+          <a href="#registration" class="btn btn-primary">Register Now</a>
+          <a href="#testimonials" class="btn btn-outline">Free Trial Class</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image fade-in">
+      <img src="https://placehold.co/700x500/6366F1/FFFFFF?text=Students+Learning+to+Code&font=Inter" alt="Students learning to code">
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section class="registration" id="registration">
+    <div class="container">
+      <div class="registration-container fade-in">
+        <div class="registration-header">
+          <h2>Join IT Kids</h2>
+          <p>Fill out the form below to register for our courses</p>
+        </div>
+        <div class="registration-form">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfaDhplKCahFH0GloHY42EoXWxL3ldlf0UmMFMY1v3-NYLZcw/viewform" 
+                  width="100%" 
+                  height="1000" 
+                  frameborder="0" 
+                  style="border-radius: 12px;">
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Post-Registration Survey -->
+  <section class="post-registration" id="postRegistration">
+    <div class="container">
+      <div class="post-registration-container fade-in">
+        <h2>Thank You for Registering! 🎉</h2>
+        <p>We're excited to have you join IT Kids! To make your learning experience even better, please share your thoughts with us.</p>
+        
+        <div class="survey-form">
+          <form id="surveyForm">
+            <div class="form-group">
+              <label for="experience">What do you hope to learn at IT Kids?</label>
+              <textarea id="experience" class="form-control" placeholder="Tell us about your goals..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="interests">What interests you most about coding?</label>
+              <textarea id="interests" class="form-control" placeholder="What excites you about technology?"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="expectations">What are your expectations from our courses?</label>
+              <textarea id="expectations" class="form-control" placeholder="What would make this experience successful for you?"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="improvements">How can we improve our program?</label>
+              <textarea id="improvements" class="form-control" placeholder="Your suggestions are valuable to us"></textarea>
+            </div>
+            
+            <div class="success-message" id="surveySuccess">
+              <i class="fas fa-check-circle"></i> Thank you for your feedback! We'll use your suggestions to improve our program.
+            </div>
+            
+            <button type="button" class="btn btn-primary" style="width: 100%;" id="submitSurvey">Submit Feedback</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>What Parents & Students Say</h2>
+        <p>Don't just take our word for it - hear from our students and their parents about their experience with IT Kids.</p>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-content">My son has discovered a passion for coding that I never expected. The projects he's created have boosted his confidence and problem-solving skills. The teachers are amazing with the kids!</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>Parent of a 12-year-old student</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-content">I love how they make coding fun! I've created my own website about my favorite soccer team, and even made a simple game. The teachers explain everything clearly and never make you feel bad for asking questions.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <h4>Maya Rodriguez</h4>
+              <p>13-year-old student</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-content">As an engineer, I was impressed with the quality of the curriculum. They don't just teach syntax - they teach real programming concepts and problem-solving skills that will serve my daughter well in the future.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">D</div>
+            <div class="author-info">
+              <h4>David Chen</h4>
+              <p>Parent and Software Engineer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <h2>Ready to Start Your Coding Journey?</h2>
+    <p>Join hundreds of students who have discovered the joy of coding with our expert-led courses designed specifically for young learners.</p>
+    <div class="cta-buttons">
+      <a href="#registration" class="btn btn-light">Book a Free Trial Class</a>
+      <a href="#courses" class="btn btn-outline-light">Explore All Courses</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-column">
+          <a href="#" class="logo" style="color: white; font-size: 1.8rem; margin-bottom: 20px; display: inline-block;">
+            <i class="fas fa-rocket"></i> IT Kids
+          </a>
+          <p>Professional coding education for children aged 11-15. Project-based learning with expert instructors in a fun, engaging environment.</p>
+          <div class="social-links">
+            <a href="https://facebook.com/marsitacademy"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/marsitacademy"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/marsitacademy"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="#courses"><i class="fas fa-chevron-right"></i> Courses</a></li>
+            <li><a href="#registration"><i class="fas fa-chevron-right"></i> Register</a></li>
+            <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+            <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Our Courses</h3>
+          <ul>
+            <li><a href="#"><i class="fas fa-code"></i> Frontend Development</a></li>
+            <li><a href="#"><i class="fas fa-paint-brush"></i> UI/UX Design</a></li>
+            <li><a href="#"><i class="fas fa-robot"></i> AI for Kids</a></li>
+            <li><a href="#"><i class="fas fa-gamepad"></i> Game Development</a></li>
+            <li><a href="#"><i class="fas fa-mobile-alt"></i> Mobile App Development</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Education Street, Tashkent</li>
+            <li><i class="fas fa-phone"></i> +998 90 123 45 67</li>
+            <li><i class="fas fa-envelope"></i> info@marsitacademy.uz</li>
+            <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 IT Kids. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mainNav = document.getElementById('mainNav');
+
+      // Mobile menu toggle
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mainNav.classList.toggle('active');
+        });
+      }
+
+      // Intersection Observer for animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      fadeElements.forEach(el => observer.observe(el));
+
+      // Header scroll effect
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 50) {
+          header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+        } else {
+          header.style.boxShadow = '0 4px 6px -1px rgba(0,0,0,0.1)';
+        }
+      });
+
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+            if (mainNav.classList.contains('active')) {
+              mainNav.classList.remove('active');
+            }
+          }
+        });
+      });
+
+      // Survey form submission
+      const submitSurveyBtn = document.getElementById('submitSurvey');
+      const surveySuccess = document.getElementById('surveySuccess');
+      if (submitSurveyBtn) {
+        submitSurveyBtn.addEventListener('click', () => {
+          const experience = document.getElementById('experience').value;
+          const interests = document.getElementById('interests').value;
+          if (!experience || !interests) {
+            alert('Please fill in the required fields.');
+            return;
+          }
+          surveySuccess.style.display = 'block';
+          setTimeout(() => {
+            document.getElementById('surveyForm').reset();
+            surveySuccess.style.display = 'none';
+          }, 5000);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
